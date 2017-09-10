@@ -1,0 +1,71 @@
+Someone pls help me, my minecraft crash every time I use JEI for search and when I'm on the page 3. There is de crash report:
+
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  CorePlugin (MrTJPCore-1.10.2-2.0.1.20-universal.jar)
+  BookshelfLoadingPlugin (Bookshelf-1.10.2-1.4.4.347.jar)
+  CoreMod (Aroma1997Core-1.9.4-1.1.1.2.jar)
+  SimpleCore (SimpleQuarry-1.10.2_1.0.2.jar)
+  MalisisCorePlugin (malisiscore-1.10.2-4.4.0.jar)
+  LoadingPlugin (ResourceLoader-MC1.9.4-1.5.1.jar)
+  EnderCorePlugin (EnderCore-1.10.2-0.4.1.66-beta.jar)
+  Brandon's Core (BrandonsCore-1.10.2-2.1.10.122-universal.jar)
+  CoFH Loading Plugin (CoFHCore-1.10.2-4.1.10.15-universal.jar)
+  Do not report to Forge! Remove FoamFixAPI (or replace with FoamFixAPI-Lawful) and try again. (foamfix-0.7.1-anarchy.jar)
+  CTMCorePlugin (CTM-MC1.10.2-0.2.1.21.jar)
+  IC2core (industrialcraft-2-2.6.252-ex110.jar)
+  LoadingPlugin (Bloodmoon-MC1.10.2-1.5.1.jar)
+  CCLCorePlugin (CodeChickenLib-1.10.2-2.5.9.283-universal.jar)
+  HammerCoreCore (HammerCore_1.10.2-1.6.9.jar)
+  NEICorePlugin (NotEnoughItems-1.10.2-2.1.3.220-universal.jar)
+  CXLibraryCore (cxlibrary-1.10.2-1.2.3.jar)
+  RebornCoreASM (RebornCore-1.10.2-2.13.6.142-universal.jar)
+  FMLPlugin (InventoryTweaks-1.61-58.jar)
+  ModpackFix (modpackfixer-1.0.0.jar)
+Contact their authors BEFORE contacting forge
+
+// You're mean.
+
+Time: 9/10/17 3:13 AM
+Description: Rendering ingredient
+
+java.lang.RuntimeException: ALREADY CONSTRUCTING VERTICES
+	at com.infinityraider.infinitylib.render.tessellation.TessellatorBakedQuad.startDrawing(TessellatorBakedQuad.java:103)
+	at com.infinityraider.infinitylib.render.tessellation.TessellatorBakedQuad.onStartDrawingQuadsCall(TessellatorBakedQuad.java:91)
+	at com.infinityraider.infinitylib.render.tessellation.TessellatorAbstractBase.startDrawingQuads(TessellatorAbstractBase.java:90)
+	at com.infinityraider.infinitylib.render.item.BakedInfItemModel.func_188616_a(BakedInfItemModel.java:53)
+	at net.minecraft.client.renderer.RenderItem.func_175045_a(RenderItem.java:128)
+	at net.minecraft.client.renderer.RenderItem.func_175036_a(RenderItem.java:112)
+	at mezz.jei.gui.ingredients.GuiIngredientFast.renderItemAndEffectIntoGUI(GuiIngredientFast.java:125)
+	at mezz.jei.gui.ingredients.GuiIngredientFast.renderItemAndEffectIntoGUI(GuiIngredientFast.java:97)
+	at mezz.jei.gui.ingredients.GuiIngredientFastList.render(GuiIngredientFastList.java:156)
+	at mezz.jei.gui.ItemListOverlayInternal.drawScreen(ItemListOverlayInternal.java:305)
+	at mezz.jei.GuiEventHandler.onDrawBackgroundEventPost(GuiEventHandler.java:89)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_1423_GuiEventHandler_onDrawBackgroundEventPost_BackgroundDrawnEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:185)
+	at net.minecraft.client.gui.GuiScreen.func_146276_q_(GuiScreen.java:590)
+	at net.minecraft.client.gui.inventory.GuiContainer.func_73863_a(GuiContainer.java:73)
+	at net.minecraft.client.renderer.InventoryEffectRenderer.func_73863_a(InventoryEffectRenderer.java:51)
+	at net.minecraft.client.gui.inventory.GuiInventory.func_73863_a(SourceFile:47)
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:382)
+	at net.minecraft.client.renderer.EntityRenderer.func_181560_a(EntityRenderer.java:1094)
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1076)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:371)
+	at net.minecraft.client.main.Main.main(SourceFile:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.multimc.onesix.OneSixLauncher.launchWithMainClass(OneSixLauncher.java:236)
+	at org.multimc.onesix.OneSixLauncher.launch(OneSixLauncher.java:297)
+	at org.multimc.EntryPoint.listen(EntryPoint.java:162)
+	at org.multimc.EntryPoint.main(EntryPoint.java:53)
+
